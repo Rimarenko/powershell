@@ -70,7 +70,7 @@
               $Event | Select-Object -Property @( 
                 @{Label = 'User';               Expression = {$_.Properties[0].Value}} 
                 @{Label = 'DomainController';   Expression = {$_.MachineName}} 
-    @{Label = 'EventId';            Expression = {$_.Id}} 
+                @{Label = 'EventId';            Expression = {$_.Id}} 
                 @{Label = 'LockedOutTimeStamp'; Expression = {$_.TimeCreated}} 
                 @{Label = 'Message';            Expression = {$_.Message -split "`r" | Select -First 1}} 
                 @{Label = 'LockedOutLocation';  Expression = {$_.Properties[1].Value}}
